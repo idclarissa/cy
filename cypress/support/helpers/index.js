@@ -1,2 +1,7 @@
-export * from './emailGenerator'
-export * from './cpf'
+const { cpf } = require("./cpf");
+const { emailGenerator } = require("./emailGenerator");
+
+module.exports = {
+  cpf,
+  emailGenerator,
+};

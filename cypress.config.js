@@ -1,20 +1,19 @@
-const { defineConfig } = require("cypress")
-const { cpf } = require('../cy/cypress/support/helpers/cpf.js')
-const { emailGenerator } = require('../cy/cypress/support/helpers/emailGenerator.js')
+const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-    e2e: {
-    baseUrl: "https://sf.vinhofacil.com.br/",
-    defaultCommandTimeout: 5000,
+  e2e: {
     viewportWidth: 1480,
     viewportHeight: 800,
-
-    setupNodeEvents(on, config) {    
-    },
-    
     fixturesFolder: false,
-    supportFile: "../cy/cypress/support/index.js",
-    supportFile: "../cy/cypress/support/helpers/emailGenerator.js",
-    // supportFile: "cypress/support/helpers/cpf.js",
-    },
+    defaultCommandTimeout: 5000,
+    baseUrl: "https://sf.vinhofacil.com.br/",
+    blockHosts: [
+      "www.facebook.com",
+      "api.omappapi.com",
+      "api.rudderlabs.com",
+      "api.soclminer.com.br",
+      "cdn-prod.securiti.ai",
+      "winealexspkv.dataplane.rudderstack.com",
+    ],
+  },
 });

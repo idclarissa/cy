@@ -1,4 +1,4 @@
-# 🛒 **Fluxo de Checkout Automatizado**
+# 🛒 **Testes Automatizados de Checkout com Cypress**
 
 ---
 
